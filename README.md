@@ -9,12 +9,13 @@ This script creates a drupal project using Composer, initializes git with a firs
 It uses the first parameter as the project folder name and database name.
 It uses the second optional parameter to set the site name, otherwise it uses the folder name.
 
-Example:
+**Example:**
 `d8_new d8_sample "Drupal 8 Sample Site"`
+and then browser: http://127.0.0.1:8888/user and login with admin/password.
 
 ## d8_remove
 
 Removes a folder in the current directory and a MySQL directory with the same name passed as argument. A useful way to remove a site previously installed with d8_new.
 
-Example:
+**Example:**
 `d8_remove d8_sample`
