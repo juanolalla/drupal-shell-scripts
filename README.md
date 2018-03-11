@@ -12,7 +12,8 @@ It uses the second optional parameter to set the site name, otherwise it uses th
 
 **Example:**
 `d8_new d8_sample "Drupal 8 Sample Site"`
-and then browser: http://127.0.0.1:8888/user and login with admin/password.
+
+and then browse: http://127.0.0.1:8888/user and login with admin/password.
 
 ## d8_remove
 
