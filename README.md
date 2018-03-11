@@ -1,6 +1,7 @@
 # Drupal Shell Scripts
 
 Useful scripts to quickly work with common tasks in Drupal. Export the directory to your PATH and enjoy!
+You might need to edit the scripts and change the MySQL username and password set by default.
 
 ## d8_new
 This script creates a drupal project using Composer, initializes git with a first commit, installs the site using MySQL and runs PHP's built-in http server at localhost:8888.
