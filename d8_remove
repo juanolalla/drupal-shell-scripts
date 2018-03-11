@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Removes a folder in the current directory and a MySQL directory with the same
+# name passed as argument.
+
+DB_USER="root"
+DB_PASSWORD=""
+
+if [ "$1" != "" ]; then
+  PROJECT=$1
+else
+  echo -n "Which project do you want to remove? (It must be a folder in the current directory) > "
+  read response
+  if [ -n "$response" ]; then
+      PROJECT=$response
+  else
+    exit
+  fi
+fi
+
+if [ -d $PROJECT ]; then
+  set -x
+  # Drop database.
+  mysql -u $DB_USER -p$DB_PASSWORD -e "DROP DATABASE $PROJECT;"
+
+  # Remove directory.
+  sudo rm -rf ./$PROJECT
+else
+  echo "$PROJECT is not a folder in the current directory"
+fi
