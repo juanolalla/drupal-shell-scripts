@@ -27,14 +27,14 @@ composer create-project drupal-composer/drupal-project:8.x-dev $PROJECT --stabil
 
 cd $PROJECT
 
+#Install the site using MySQL.
+drush site-install standard -y \
+--db-url="mysql://$DB_USER:$DB_PASSWORD@localhost/$PROJECT" --account-pass=password --site-name="$SITE_NAME"
+
 # Initialize git.
 git init
 git add .
 git commit -m "Create drupal project using Composer"
-
-#Install the site using MySQL.
-drush site-install standard -y \
---db-url="mysql://$DB_USER:$DB_PASSWORD@localhost/$PROJECT" --account-pass=password --site-name="$SITE_NAME"
 
 # Run PHP's built-in http server at localhost:8888
 drush runserver
