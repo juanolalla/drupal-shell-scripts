@@ -1,8 +1,9 @@
 #!/bin/bash
 
-# Removes a folder in the current directory and a MySQL directory with the same
+# Removes a folder in the current directory and a mysql directory with the same
 # name passed as argument.
 
+# Set your local mysql user and password.
 DB_USER="root"
 DB_PASSWORD=""
 
